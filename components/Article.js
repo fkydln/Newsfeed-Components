@@ -122,11 +122,11 @@ function articleMaker(article) {
   newArticleP2 = document.createElement('p');
   newArticleP3 = document.createElement('p');
   newArticleSpan = document.createElement('span');
-  newArticleH2.textContent = article[0].title;
-  newArticleP.textContent = article[0].date;
-  newArticleP1.textContent = article[0].firstParagraph;
-  newArticleP2.textContent = article[0].secondParagraph;
-  newArticleP3.textContent = article[0].thirdParagraph;
+  newArticleH2.textContent = article.title;
+  newArticleP.textContent = article.date;
+  newArticleP1.textContent = article.firstParagraph;
+  newArticleP2.textContent = article.secondParagraph;
+  newArticleP3.textContent = article.thirdParagraph;
  
 
   newArticleDiv.classList.add('article');
@@ -144,4 +144,7 @@ function articleMaker(article) {
   newArticleDiv.appendChild(newArticleSpan)
 
 }
-articleMaker(data)
+
+data.forEach((arrayItem)=>{
+  articleMaker(arrayItem);
+})
